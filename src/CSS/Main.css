@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, #root, body, .app {
+    font-family: 'Comfortaa', cursive;
+    height: 100%;
+    /* background-color: #5d905f; */
+    background: linear-gradient(45deg, #cc6f6f, #ffd641);
+}
+a {
+    text-decoration: none;
+}
+
+.app {
+    display: grid;
+    grid-template-areas: 'navbar' 'content';
+    grid-template-columns: auto;
+    grid-template-rows: 4rem 1fr;
+
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-center-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all 0.4s;
+    z-index: 1;
+    user-select: none;
+    /* background-color: #bad6b6; */
+    color: #39593b;
+
+    background: rgba(255, 255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.nav-main {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #5d905f; */
+    z-index: 1;
+}
+.nav-status {
+    margin-right: 1rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+.nav-main > * {
+    height: 4rem;
+    padding: 0 1rem;
+}
+.navbar .logo {
+    transition: all 0.4s;
+}
+.navbar .dropdown-icon {
+    position: relative;
+    font-size: 2rem;
+    transition: all 0.4s;
+}
+.navbar .dropdown-icon:hover {
+    color:#39773b;
+    cursor: pointer;
+    transform: rotate(0) scale(1);
+}
+.svg-inline--fa.fa-chevron-circle-down.fa-w-16.dropdown-icon.show {
+    transform: rotate(180deg) scale(1.2);
+}
+.nav-links {
+    width: 100%;
+    height: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.5s;
+    background: rgba(255, 255,255,0.5);
+}
+.nav-links.show {
+    height: 11rem;
+}
+.navlink {
+    width: 100%;
+    height: 0;
+    font-size: 0;
+    transition: all 0.2s;
+    color: #1976d2;
+    background: rgba(255, 255,255,0.85);
+}
+.navlink:hover {
+    background: rgb(202, 132, 132);
+}
+.navlink.show {
+    height: 2.5rem;
+}
+.navlink.showText {
+    font-size: 1rem;
+}
+.nav-icon {
+    margin-right: 0.5rem;
+}
+
+
+
+.home-container {
+    grid-area: content;
+}
+
+
+
+.auth-container {
+    grid-area: content;
+}
+.auth-icon {
+    font-size: 2rem;
+}
+.auth-form {
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 500px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    background: rgba(255, 255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.auth-form form, input {
+    width: 100%;
+    outline: none;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+.auth-form input {
+    height: 2rem;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    margin: 0.5rem;
+    padding-left: 1rem;
+
+}
+.auth-form .input-submit input {
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    padding: 0;
+    transition: all 0.3s;
+    width: 30%;
+
+}
+.auth-form .input-submit input:hover {
+    background: rgba(255,255,255,0.75);
+}
+.show-password {
+    border: 1px solid white;
+    width: fit-content;
+    padding: 0 1rem 0 1rem;
+    text-align: center;
+    margin: auto;
+    color: white;
+    user-select: none;
+}
